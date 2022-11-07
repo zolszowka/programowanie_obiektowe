@@ -1,7 +1,7 @@
 package agh.ics.oop;
 
 public class World {
-
+/*
     public static void run(Direction[] directions) {
         for (int i = 0; i < directions.length; i++) {
             String message = switch (directions[i]) {
@@ -29,8 +29,33 @@ public class World {
         }
         return directions;
     }
-
+*/
     public static void main(String[] args) {
+        //lab3
+        //3.
+        Animal zwierzak = new Animal();
+        System.out.println(zwierzak.toString());
+
+        //5.
+        zwierzak.move(MoveDirection.RIGHT);
+        zwierzak.move(MoveDirection.FORWARD);
+        zwierzak.move(MoveDirection.FORWARD);
+        zwierzak.move(MoveDirection.FORWARD);
+        System.out.println(zwierzak.toString());
+
+        //7.
+        MoveDirection[] directions = OptionsParser.parse(args);
+        for (MoveDirection step: directions){
+            zwierzak.move(step);
+        }
+        System.out.println(zwierzak.toString());
+
+        //10.
+        /* Aby wykluczyć możliwość pojawienia się dwóch zwierząt w tym samym miejscu należy stworzyć klasę,
+        która dla każdych koordynatów x i y na mapie będzie przyechowywać wartość Boolean. Dla pola zajętego będzie ona
+        wynosić True, a dla wolnego False.*/
+
+        /*
         //lab2
         Vector2d position1 = new Vector2d(1,2);
         System.out.println(position1);
@@ -43,7 +68,7 @@ public class World {
         System.out.println("Start");
         Direction[] directions = convert(args);
         run(directions);
-        System.out.println("Stop");
+        System.out.println("Stop");*/
     }
 
 }
