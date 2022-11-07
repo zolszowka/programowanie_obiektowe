@@ -1,0 +1,321 @@
+Index: src/main/java/agh/ics/oop/Vector2d.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package agh.ics.oop;\r\n\r\nimport java.util.Objects;\r\n\r\npublic class Vector2d {\r\n    public final int x;\r\n    public final int y;\r\n\r\n    public Vector2d(int x, int y) {\r\n        this.x = x;\r\n        this.y = y;\r\n    }\r\n\r\n    public String toString() {\r\n        return \"(\" + this.x + \", \" + this.y + \")\";\r\n    }\r\n\r\n    public boolean precedes(Vector2d other) {\r\n        return other.x >= this.x && other.y >= this.y;\r\n    }\r\n\r\n    public boolean follows(Vector2d other) {\r\n        return other.x <= this.x && other.y <= this.y;\r\n    }\r\n\r\n    public Vector2d add(Vector2d other) {\r\n        return new Vector2d(this.x + other.x, this.y + other.y);\r\n    }\r\n\r\n    public Vector2d subtract(Vector2d other) {\r\n        return new Vector2d(this.x - other.x, this.y -other.y);\r\n    }\r\n\r\n    public Vector2d upperRight(Vector2d other) {\r\n        return new Vector2d(Math.max(this.x, other.x), Math.max(this.y, other.y));\r\n    }\r\n\r\n    public Vector2d lowerLeft(Vector2d other) {\r\n        return new Vector2d(Math.min(this.x, other.x), Math.min(this.y, other.y));\r\n    }\r\n\r\n    public Vector2d opposite() {\r\n        return new Vector2d(-this.x, -this.y);\r\n    }\r\n\r\n    @Override\r\n    public boolean equals(Object o) {\r\n        if (this == o) return true;\r\n        if (o == null || getClass() != o.getClass()) return false;\r\n        Vector2d vector2d = (Vector2d) o;\r\n        return x == vector2d.x && y == vector2d.y;\r\n    }\r\n\r\n    @Override\r\n    public int hashCode() {\r\n        return Objects.hash(x, y);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/agh/ics/oop/Vector2d.java b/src/main/java/agh/ics/oop/Vector2d.java
+--- a/src/main/java/agh/ics/oop/Vector2d.java	(revision 473b5fdbf1493065f298aeb6b03ef2dda285c6b8)
++++ b/src/main/java/agh/ics/oop/Vector2d.java	(date 1667840365567)
+@@ -28,7 +28,7 @@
+     }
+ 
+     public Vector2d subtract(Vector2d other) {
+-        return new Vector2d(this.x - other.x, this.y -other.y);
++        return new Vector2d(this.x - other.x, this.y - other.y);
+     }
+ 
+     public Vector2d upperRight(Vector2d other) {
+Index: build/test-results/test/TEST-agh.ics.oop.Vextor2dTest.xml
+===================================================================
+diff --git a/build/test-results/test/TEST-agh.ics.oop.Vextor2dTest.xml b/build/test-results/test/TEST-agh.ics.oop.Vextor2dTest.xml
+deleted file mode 100644
+--- a/build/test-results/test/TEST-agh.ics.oop.Vextor2dTest.xml	(revision 473b5fdbf1493065f298aeb6b03ef2dda285c6b8)
++++ /dev/null	(revision 473b5fdbf1493065f298aeb6b03ef2dda285c6b8)
+@@ -1,15 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<testsuite name="agh.ics.oop.Vextor2dTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-10-24T19:29:13" hostname="L-10Z" time="0.053">
+-  <properties/>
+-  <testcase name="upperRightTest()" classname="agh.ics.oop.Vextor2dTest" time="0.027"/>
+-  <testcase name="addTest()" classname="agh.ics.oop.Vextor2dTest" time="0.001"/>
+-  <testcase name="precedesTest()" classname="agh.ics.oop.Vextor2dTest" time="0.003"/>
+-  <testcase name="oppositeTest()" classname="agh.ics.oop.Vextor2dTest" time="0.002"/>
+-  <testcase name="lowerLeftTest()" classname="agh.ics.oop.Vextor2dTest" time="0.001"/>
+-  <testcase name="equalsTest()" classname="agh.ics.oop.Vextor2dTest" time="0.0"/>
+-  <testcase name="toStringTest()" classname="agh.ics.oop.Vextor2dTest" time="0.008"/>
+-  <testcase name="subtractTest()" classname="agh.ics.oop.Vextor2dTest" time="0.001"/>
+-  <testcase name="followsTest()" classname="agh.ics.oop.Vextor2dTest" time="0.001"/>
+-  <system-out><![CDATA[]]></system-out>
+-  <system-err><![CDATA[]]></system-err>
+-</testsuite>
+Index: build/reports/tests/test/classes/agh.ics.oop.Vextor2dTest.html
+===================================================================
+diff --git a/build/reports/tests/test/classes/agh.ics.oop.Vextor2dTest.html b/build/reports/tests/test/classes/agh.ics.oop.Vextor2dTest.html
+deleted file mode 100644
+--- a/build/reports/tests/test/classes/agh.ics.oop.Vextor2dTest.html	(revision 473b5fdbf1493065f298aeb6b03ef2dda285c6b8)
++++ /dev/null	(revision 473b5fdbf1493065f298aeb6b03ef2dda285c6b8)
+@@ -1,136 +0,0 @@
+-<!DOCTYPE html>
+-<html>
+-<head>
+-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+-<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+-<title>Test results - Vextor2dTest</title>
+-<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+-<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+-<script src="../js/report.js" type="text/javascript"></script>
+-</head>
+-<body>
+-<div id="content">
+-<h1>Vextor2dTest</h1>
+-<div class="breadcrumbs">
+-<a href="../index.html">all</a> &gt; 
+-<a href="../packages/agh.ics.oop.html">agh.ics.oop</a> &gt; Vextor2dTest</div>
+-<div id="summary">
+-<table>
+-<tr>
+-<td>
+-<div class="summaryGroup">
+-<table>
+-<tr>
+-<td>
+-<div class="infoBox" id="tests">
+-<div class="counter">9</div>
+-<p>tests</p>
+-</div>
+-</td>
+-<td>
+-<div class="infoBox" id="failures">
+-<div class="counter">0</div>
+-<p>failures</p>
+-</div>
+-</td>
+-<td>
+-<div class="infoBox" id="ignored">
+-<div class="counter">0</div>
+-<p>ignored</p>
+-</div>
+-</td>
+-<td>
+-<div class="infoBox" id="duration">
+-<div class="counter">0.044s</div>
+-<p>duration</p>
+-</div>
+-</td>
+-</tr>
+-</table>
+-</div>
+-</td>
+-<td>
+-<div class="infoBox success" id="successRate">
+-<div class="percent">100%</div>
+-<p>successful</p>
+-</div>
+-</td>
+-</tr>
+-</table>
+-</div>
+-<div id="tabs">
+-<ul class="tabLinks">
+-<li>
+-<a href="#tab0">Tests</a>
+-</li>
+-</ul>
+-<div id="tab0" class="tab">
+-<h2>Tests</h2>
+-<table>
+-<thead>
+-<tr>
+-<th>Test</th>
+-<th>Duration</th>
+-<th>Result</th>
+-</tr>
+-</thead>
+-<tr>
+-<td class="success">addTest()</td>
+-<td class="success">0.001s</td>
+-<td class="success">passed</td>
+-</tr>
+-<tr>
+-<td class="success">equalsTest()</td>
+-<td class="success">0s</td>
+-<td class="success">passed</td>
+-</tr>
+-<tr>
+-<td class="success">followsTest()</td>
+-<td class="success">0.001s</td>
+-<td class="success">passed</td>
+-</tr>
+-<tr>
+-<td class="success">lowerLeftTest()</td>
+-<td class="success">0.001s</td>
+-<td class="success">passed</td>
+-</tr>
+-<tr>
+-<td class="success">oppositeTest()</td>
+-<td class="success">0.002s</td>
+-<td class="success">passed</td>
+-</tr>
+-<tr>
+-<td class="success">precedesTest()</td>
+-<td class="success">0.003s</td>
+-<td class="success">passed</td>
+-</tr>
+-<tr>
+-<td class="success">subtractTest()</td>
+-<td class="success">0.001s</td>
+-<td class="success">passed</td>
+-</tr>
+-<tr>
+-<td class="success">toStringTest()</td>
+-<td class="success">0.008s</td>
+-<td class="success">passed</td>
+-</tr>
+-<tr>
+-<td class="success">upperRightTest()</td>
+-<td class="success">0.027s</td>
+-<td class="success">passed</td>
+-</tr>
+-</table>
+-</div>
+-</div>
+-<div id="footer">
+-<p>
+-<div>
+-<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+-<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+-</label>
+-</div>Generated by 
+-<a href="http://www.gradle.org">Gradle 7.4</a> at 24 paź 2022, 21:29:14</p>
+-</div>
+-</div>
+-</body>
+-</html>
+Index: build/reports/tests/test/packages/agh.ics.oop.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\r\n<meta http-equiv=\"x-ua-compatible\" content=\"IE=edge\"/>\r\n<title>Test results - Package agh.ics.oop</title>\r\n<link href=\"../css/base-style.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"../css/style.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<script src=\"../js/report.js\" type=\"text/javascript\"></script>\r\n</head>\r\n<body>\r\n<div id=\"content\">\r\n<h1>Package agh.ics.oop</h1>\r\n<div class=\"breadcrumbs\">\r\n<a href=\"../index.html\">all</a> &gt; agh.ics.oop</div>\r\n<div id=\"summary\">\r\n<table>\r\n<tr>\r\n<td>\r\n<div class=\"summaryGroup\">\r\n<table>\r\n<tr>\r\n<td>\r\n<div class=\"infoBox\" id=\"tests\">\r\n<div class=\"counter\">9</div>\r\n<p>tests</p>\r\n</div>\r\n</td>\r\n<td>\r\n<div class=\"infoBox\" id=\"failures\">\r\n<div class=\"counter\">0</div>\r\n<p>failures</p>\r\n</div>\r\n</td>\r\n<td>\r\n<div class=\"infoBox\" id=\"ignored\">\r\n<div class=\"counter\">0</div>\r\n<p>ignored</p>\r\n</div>\r\n</td>\r\n<td>\r\n<div class=\"infoBox\" id=\"duration\">\r\n<div class=\"counter\">0.044s</div>\r\n<p>duration</p>\r\n</div>\r\n</td>\r\n</tr>\r\n</table>\r\n</div>\r\n</td>\r\n<td>\r\n<div class=\"infoBox success\" id=\"successRate\">\r\n<div class=\"percent\">100%</div>\r\n<p>successful</p>\r\n</div>\r\n</td>\r\n</tr>\r\n</table>\r\n</div>\r\n<div id=\"tabs\">\r\n<ul class=\"tabLinks\">\r\n<li>\r\n<a href=\"#tab0\">Classes</a>\r\n</li>\r\n</ul>\r\n<div id=\"tab0\" class=\"tab\">\r\n<h2>Classes</h2>\r\n<table>\r\n<thread>\r\n<tr>\r\n<th>Class</th>\r\n<th>Tests</th>\r\n<th>Failures</th>\r\n<th>Ignored</th>\r\n<th>Duration</th>\r\n<th>Success rate</th>\r\n</tr>\r\n</thread>\r\n<tr>\r\n<td class=\"success\">\r\n<a href=\"../classes/agh.ics.oop.Vextor2dTest.html\">Vextor2dTest</a>\r\n</td>\r\n<td>9</td>\r\n<td>0</td>\r\n<td>0</td>\r\n<td>0.044s</td>\r\n<td class=\"success\">100%</td>\r\n</tr>\r\n</table>\r\n</div>\r\n</div>\r\n<div id=\"footer\">\r\n<p>\r\n<div>\r\n<label class=\"hidden\" id=\"label-for-line-wrapping-toggle\" for=\"line-wrapping-toggle\">Wrap lines\r\n<input id=\"line-wrapping-toggle\" type=\"checkbox\" autocomplete=\"off\"/>\r\n</label>\r\n</div>Generated by \r\n<a href=\"http://www.gradle.org\">Gradle 7.4</a> at 24 paź 2022, 21:29:14</p>\r\n</div>\r\n</div>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build/reports/tests/test/packages/agh.ics.oop.html b/build/reports/tests/test/packages/agh.ics.oop.html
+--- a/build/reports/tests/test/packages/agh.ics.oop.html	(revision 473b5fdbf1493065f298aeb6b03ef2dda285c6b8)
++++ b/build/reports/tests/test/packages/agh.ics.oop.html	(date 1667850437959)
+@@ -22,7 +22,7 @@
+ <tr>
+ <td>
+ <div class="infoBox" id="tests">
+-<div class="counter">9</div>
++<div class="counter">4</div>
+ <p>tests</p>
+ </div>
+ </td>
+@@ -40,7 +40,7 @@
+ </td>
+ <td>
+ <div class="infoBox" id="duration">
+-<div class="counter">0.044s</div>
++<div class="counter">0.042s</div>
+ <p>duration</p>
+ </div>
+ </td>
+@@ -78,12 +78,12 @@
+ </thread>
+ <tr>
+ <td class="success">
+-<a href="../classes/agh.ics.oop.Vextor2dTest.html">Vextor2dTest</a>
++<a href="../classes/agh.ics.oop.AnimalTest.html">AnimalTest</a>
+ </td>
+-<td>9</td>
++<td>4</td>
+ <td>0</td>
+ <td>0</td>
+-<td>0.044s</td>
++<td>0.042s</td>
+ <td class="success">100%</td>
+ </tr>
+ </table>
+@@ -96,7 +96,7 @@
+ <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+ </label>
+ </div>Generated by 
+-<a href="http://www.gradle.org">Gradle 7.4</a> at 24 paź 2022, 21:29:14</p>
++<a href="http://www.gradle.org">Gradle 7.4</a> at 7 lis 2022, 20:47:17</p>
+ </div>
+ </div>
+ </body>
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n          </set>\r\n        </option>\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+--- a/.idea/gradle.xml	(revision 473b5fdbf1493065f298aeb6b03ef2dda285c6b8)
++++ b/.idea/gradle.xml	(date 1667840366051)
+@@ -13,5 +13,6 @@
+         </option>
+       </GradleProjectSettings>
+     </option>
++    <option name="offlineMode" value="true" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: build/reports/tests/test/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\r\n<meta http-equiv=\"x-ua-compatible\" content=\"IE=edge\"/>\r\n<title>Test results - Test Summary</title>\r\n<link href=\"css/base-style.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<link href=\"css/style.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n<script src=\"js/report.js\" type=\"text/javascript\"></script>\r\n</head>\r\n<body>\r\n<div id=\"content\">\r\n<h1>Test Summary</h1>\r\n<div id=\"summary\">\r\n<table>\r\n<tr>\r\n<td>\r\n<div class=\"summaryGroup\">\r\n<table>\r\n<tr>\r\n<td>\r\n<div class=\"infoBox\" id=\"tests\">\r\n<div class=\"counter\">9</div>\r\n<p>tests</p>\r\n</div>\r\n</td>\r\n<td>\r\n<div class=\"infoBox\" id=\"failures\">\r\n<div class=\"counter\">0</div>\r\n<p>failures</p>\r\n</div>\r\n</td>\r\n<td>\r\n<div class=\"infoBox\" id=\"ignored\">\r\n<div class=\"counter\">0</div>\r\n<p>ignored</p>\r\n</div>\r\n</td>\r\n<td>\r\n<div class=\"infoBox\" id=\"duration\">\r\n<div class=\"counter\">0.044s</div>\r\n<p>duration</p>\r\n</div>\r\n</td>\r\n</tr>\r\n</table>\r\n</div>\r\n</td>\r\n<td>\r\n<div class=\"infoBox success\" id=\"successRate\">\r\n<div class=\"percent\">100%</div>\r\n<p>successful</p>\r\n</div>\r\n</td>\r\n</tr>\r\n</table>\r\n</div>\r\n<div id=\"tabs\">\r\n<ul class=\"tabLinks\">\r\n<li>\r\n<a href=\"#tab0\">Packages</a>\r\n</li>\r\n<li>\r\n<a href=\"#tab1\">Classes</a>\r\n</li>\r\n</ul>\r\n<div id=\"tab0\" class=\"tab\">\r\n<h2>Packages</h2>\r\n<table>\r\n<thead>\r\n<tr>\r\n<th>Package</th>\r\n<th>Tests</th>\r\n<th>Failures</th>\r\n<th>Ignored</th>\r\n<th>Duration</th>\r\n<th>Success rate</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr>\r\n<td class=\"success\">\r\n<a href=\"packages/agh.ics.oop.html\">agh.ics.oop</a>\r\n</td>\r\n<td>9</td>\r\n<td>0</td>\r\n<td>0</td>\r\n<td>0.044s</td>\r\n<td class=\"success\">100%</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n<div id=\"tab1\" class=\"tab\">\r\n<h2>Classes</h2>\r\n<table>\r\n<thead>\r\n<tr>\r\n<th>Class</th>\r\n<th>Tests</th>\r\n<th>Failures</th>\r\n<th>Ignored</th>\r\n<th>Duration</th>\r\n<th>Success rate</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr>\r\n<td class=\"success\">\r\n<a href=\"classes/agh.ics.oop.Vextor2dTest.html\">agh.ics.oop.Vextor2dTest</a>\r\n</td>\r\n<td>9</td>\r\n<td>0</td>\r\n<td>0</td>\r\n<td>0.044s</td>\r\n<td class=\"success\">100%</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n<div id=\"footer\">\r\n<p>\r\n<div>\r\n<label class=\"hidden\" id=\"label-for-line-wrapping-toggle\" for=\"line-wrapping-toggle\">Wrap lines\r\n<input id=\"line-wrapping-toggle\" type=\"checkbox\" autocomplete=\"off\"/>\r\n</label>\r\n</div>Generated by \r\n<a href=\"http://www.gradle.org\">Gradle 7.4</a> at 24 paź 2022, 21:29:14</p>\r\n</div>\r\n</div>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build/reports/tests/test/index.html b/build/reports/tests/test/index.html
+--- a/build/reports/tests/test/index.html	(revision 473b5fdbf1493065f298aeb6b03ef2dda285c6b8)
++++ b/build/reports/tests/test/index.html	(date 1667850437959)
+@@ -20,7 +20,7 @@
+ <tr>
+ <td>
+ <div class="infoBox" id="tests">
+-<div class="counter">9</div>
++<div class="counter">4</div>
+ <p>tests</p>
+ </div>
+ </td>
+@@ -38,7 +38,7 @@
+ </td>
+ <td>
+ <div class="infoBox" id="duration">
+-<div class="counter">0.044s</div>
++<div class="counter">0.042s</div>
+ <p>duration</p>
+ </div>
+ </td>
+@@ -82,10 +82,10 @@
+ <td class="success">
+ <a href="packages/agh.ics.oop.html">agh.ics.oop</a>
+ </td>
+-<td>9</td>
++<td>4</td>
+ <td>0</td>
+ <td>0</td>
+-<td>0.044s</td>
++<td>0.042s</td>
+ <td class="success">100%</td>
+ </tr>
+ </tbody>
+@@ -107,12 +107,12 @@
+ <tbody>
+ <tr>
+ <td class="success">
+-<a href="classes/agh.ics.oop.Vextor2dTest.html">agh.ics.oop.Vextor2dTest</a>
++<a href="classes/agh.ics.oop.AnimalTest.html">agh.ics.oop.AnimalTest</a>
+ </td>
+-<td>9</td>
++<td>4</td>
+ <td>0</td>
+ <td>0</td>
+-<td>0.044s</td>
++<td>0.042s</td>
+ <td class="success">100%</td>
+ </tr>
+ </tbody>
+@@ -126,7 +126,7 @@
+ <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+ </label>
+ </div>Generated by 
+-<a href="http://www.gradle.org">Gradle 7.4</a> at 24 paź 2022, 21:29:14</p>
++<a href="http://www.gradle.org">Gradle 7.4</a> at 7 lis 2022, 20:47:17</p>
+ </div>
+ </div>
+ </body>
