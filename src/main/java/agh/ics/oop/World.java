@@ -31,6 +31,16 @@ public class World {
     }
 */
     public static void main(String[] args) {
+        //lab4
+        MoveDirection[] directions = new OptionsParser().parse(args);
+        IWorldMap map = new RectangularMap(10, 5);
+        Vector2d[] positions = {new Vector2d(2,2), new Vector2d(3,4)};
+        IEngine engine = new SimulationEngine(directions, map, positions);
+        engine.run();
+        System.out.println(map);
+
+
+        /*
         //lab3
         //3.
         Animal zwierzak = new Animal();
@@ -51,11 +61,10 @@ public class World {
         System.out.println(zwierzak.toString());
 
         //10.
-        /* Aby wykluczyć możliwość pojawienia się dwóch zwierząt w tym samym miejscu należy stworzyć klasę,
+        Aby wykluczyć możliwość pojawienia się dwóch zwierząt w tym samym miejscu należy stworzyć klasę,
         która dla każdych koordynatów x i y na mapie będzie przyechowywać wartość Boolean. Dla pola zajętego będzie ona
-        wynosić True, a dla wolnego False.*/
+        wynosić True, a dla wolnego False.
 
-        /*
         //lab2
         Vector2d position1 = new Vector2d(1,2);
         System.out.println(position1);

@@ -5,9 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AnimalTest {
+    private static final IWorldMap map = new RectangularMap(5, 5);
     @Test
     public void OrientationTest() {
-        Animal zwierzak = new Animal(); //NORTH
+        Animal zwierzak = new Animal(map); //NORTH
         for (int i = 0; i < 4; i++) {
             zwierzak.move(MoveDirection.RIGHT);
             switch (i) {
@@ -32,7 +33,7 @@ public class AnimalTest {
 
     @Test
     public void PositionTest() {
-        Animal zwierzak = new Animal();
+        Animal zwierzak = new Animal(map);
         String[] input = {"f", "f", "b", "r", "f", "b", "r", "f", "f", "l", "f"};
         Vector2d[] correct = {new Vector2d(2, 3), new Vector2d(2, 4), new Vector2d(2, 3), new Vector2d(2, 3), new Vector2d(3, 3), new Vector2d(2, 3),new Vector2d(2, 3), new Vector2d(2, 2), new Vector2d(2, 1), new Vector2d(2, 1), new Vector2d(3,1)};
         MoveDirection[] result = OptionsParser.parse(input);
@@ -45,7 +46,7 @@ public class AnimalTest {
 
     @Test
     public void OutOfBoundsTest(){
-        Animal zwierzak = new Animal();
+        Animal zwierzak = new Animal(map);
 
         for(int i = 0; i<10; i++){
             zwierzak.move(MoveDirection.FORWARD);
