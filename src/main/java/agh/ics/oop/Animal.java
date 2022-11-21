@@ -1,6 +1,6 @@
 package agh.ics.oop;
 
-public class Animal {
+public class Animal implements IMapElement {
     private MapDirection orientation = MapDirection.NORTH;
     private Vector2d position = new Vector2d(2, 2);
     private final IWorldMap map;
@@ -9,9 +9,9 @@ public class Animal {
         this.map = map;
     }
 
-    public Animal(IWorldMap map, Vector2d initialPosition) {
-        this.position = initialPosition;
+    public Animal(IWorldMap map, Vector2d newPosition) {
         this.map = map;
+        this.position = newPosition;
     }
 
     public String toString() {
@@ -31,6 +31,7 @@ public class Animal {
         return this.orientation;
     }
 
+    @Override
     public Vector2d getPosition() {
         return this.position;
     }

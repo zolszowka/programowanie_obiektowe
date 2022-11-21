@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class Vextor2dTest {
+public class Vector2dTest {
     Vector2d position_1_2_a = new Vector2d(1,2);
     Vector2d position_1_2_b = new Vector2d(1,2);
     Vector2d position_3_3 = new Vector2d(3,3);

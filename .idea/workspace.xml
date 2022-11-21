@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efa03a13-9bab-41a6-be10-671809f21708" name="Changes" comment="lab3">
+    <list default="true" id="efa03a13-9bab-41a6-be10-671809f21708" name="Changes" comment="lab4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/Animal$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/Animal$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/MapDirection.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/MapDirection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/agh/ics/oop/AnimalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/agh/ics/oop/AnimalTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/agh/ics/oop/Vextor2dTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/AnimalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/AnimalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/RectangularMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/RectangularMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/RectangularMapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/Vextor2dTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/Vector2dTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,17 +81,34 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.SimulationEngineTest.runTest">
-    <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.World" />
-      <module name="oolab.main" />
-      <option name="PROGRAM_PARAMETERS" value="f b r l f f r r f f f f f f f f" />
+  <component name="RunManager" selected="JUnit.GrassFieldTest">
+    <configuration name="GrassFieldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oolab.test" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="agh.ics.oop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="agh.ics.oop" />
+      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.GrassFieldTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GrassFieldTest.GrassFieldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oolab.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="agh.ics.oop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="agh.ics.oop" />
+      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.GrassFieldTest" />
+      <option name="METHOD_NAME" value="GrassFieldTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,36 +160,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimulationEngineTest.runTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="oolab.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="agh.ics.oop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="agh.ics.oop" />
-      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.SimulationEngineTest" />
-      <option name="METHOD_NAME" value="runTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.World" />
-      <item itemvalue="JUnit.SimulationEngineTest.runTest" />
       <item itemvalue="JUnit.RectangularMapTest" />
+      <item itemvalue="JUnit.GrassFieldTest" />
+      <item itemvalue="JUnit.GrassFieldTest.GrassFieldTest" />
       <item itemvalue="JUnit.RectangularMapTest.isOccupiedTest" />
       <item itemvalue="JUnit.RectangularMapTest.objectAtTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SimulationEngineTest.runTest" />
-        <item itemvalue="Application.World" />
+        <item itemvalue="JUnit.GrassFieldTest" />
         <item itemvalue="JUnit.RectangularMapTest" />
         <item itemvalue="JUnit.RectangularMapTest.objectAtTest" />
         <item itemvalue="JUnit.RectangularMapTest.isOccupiedTest" />
+        <item itemvalue="JUnit.GrassFieldTest.GrassFieldTest" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +197,13 @@
       <workItem from="1667736727324" duration="40000" />
       <workItem from="1667762659078" duration="14850000" />
       <workItem from="1667922643443" duration="1341000" />
-      <workItem from="1668362472202" duration="11435000" />
+      <workItem from="1668362472202" duration="13135000" />
+      <workItem from="1668529081906" duration="2944000" />
+      <workItem from="1668713955617" duration="4281000" />
+      <workItem from="1668761919982" duration="600000" />
+      <workItem from="1668793533147" duration="5119000" />
+      <workItem from="1668840083188" duration="8460000" />
+      <workItem from="1669033641203" duration="3195000" />
     </task>
     <task id="LOCAL-00001" summary="lab2">
       <created>1666637295388</created>
@@ -242,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667853459634</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="lab4">
+      <created>1668442938960</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668442938960</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +272,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin2/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -296,6 +308,7 @@
     <MESSAGE value="lab2" />
     <MESSAGE value="lab1" />
     <MESSAGE value="lab3" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab3" />
+    <MESSAGE value="lab4" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab4" />
   </component>
 </project>
