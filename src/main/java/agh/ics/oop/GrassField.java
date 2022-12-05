@@ -1,14 +1,16 @@
 package agh.ics.oop;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class GrassField extends AbstractWorldMap implements IWorldMap {
     private final int NumberOfGrassFields;
-    private final ArrayList<Grass> grasses;
+    private final Map<Vector2d, Grass> grasses;
 
     public GrassField(int NumberOfGrassFields) {
         this.NumberOfGrassFields = NumberOfGrassFields;
-        this.grasses = new ArrayList<>();
+        this.grasses = new HashMap<>();
         int low = 0;
         int high = (int) Math.floor(Math.sqrt(10 * NumberOfGrassFields));
         Vector2d position = generatePosition(low, high);
@@ -16,7 +18,8 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
             while (isOccupied(position)) {
                 position = generatePosition(low, high);
             }
-            grasses.add(new Grass(position));
+            Grass pieceOfGrass = new Grass(position);
+            this.grasses.put(position, pieceOfGrass);
         }
     }
 
@@ -35,24 +38,21 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
         if (super.objectAt(position) != null) {
             return super.objectAt(position);
         }
-        for (Grass grass : grasses) {
-            if (grass.getPosition().equals(position)) {
-                return grass;
-            }
+        else{
+            return grasses.get(position);
         }
-        return null;
     }
 
     @Override
     public Vector2d[] updateBounds() {
         Vector2d upper = new Vector2d(Integer.MIN_VALUE, Integer.MIN_VALUE);
         Vector2d lower = new Vector2d(Integer.MAX_VALUE, Integer.MAX_VALUE);
-        for (Animal animal : this.animals) {
+        for (IMapElement animal : animals.values()) {
             upper = upper.upperRight(animal.getPosition());
             lower = lower.lowerLeft(animal.getPosition());
         }
 
-        for (Grass grass : this.grasses) {
+        for (IMapElement grass : grasses.values()) {
             upper = upper.upperRight(grass.getPosition());
             lower = lower.lowerLeft(grass.getPosition());
         }

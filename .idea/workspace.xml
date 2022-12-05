@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efa03a13-9bab-41a6-be10-671809f21708" name="Changes" comment="lab4">
+    <list default="true" id="efa03a13-9bab-41a6-be10-671809f21708" name="Changes" comment="lab5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/AbstractWorldMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/AbstractWorldMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/Animal$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/Animal$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/agh/ics/oop/Vextor2dTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/GrassField.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/agh/ics/oop/GrassField.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/AbstractWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/AbstractWorldMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/RectangularMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/RectangularMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/RectangularMapTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/Vextor2dTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/Vector2dTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/GrassField.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +82,22 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.GrassFieldTest">
+  <component name="RunManager" selected="JUnit.Vector2dTest">
+    <configuration name="AnimalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oolab.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="agh.ics.oop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="agh.ics.oop" />
+      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.AnimalTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GrassFieldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oolab.test" />
       <extension name="coverage">
@@ -97,22 +113,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GrassFieldTest.GrassFieldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="oolab.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="agh.ics.oop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="agh.ics.oop" />
-      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.GrassFieldTest" />
-      <option name="METHOD_NAME" value="GrassFieldTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RectangularMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="oolab.test" />
       <extension name="coverage">
@@ -124,22 +124,6 @@
       <option name="PACKAGE_NAME" value="agh.ics.oop" />
       <option name="MAIN_CLASS_NAME" value="agh.ics.oop.RectangularMapTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RectangularMapTest.isOccupiedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="oolab.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="agh.ics.oop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="agh.ics.oop" />
-      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.RectangularMapTest" />
-      <option name="METHOD_NAME" value="isOccupiedTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,20 +144,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Vector2dTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oolab.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="agh.ics.oop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="agh.ics.oop" />
+      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.Vector2dTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="JUnit.AnimalTest" />
+      <item itemvalue="JUnit.Vector2dTest" />
       <item itemvalue="JUnit.RectangularMapTest" />
       <item itemvalue="JUnit.GrassFieldTest" />
-      <item itemvalue="JUnit.GrassFieldTest.GrassFieldTest" />
-      <item itemvalue="JUnit.RectangularMapTest.isOccupiedTest" />
       <item itemvalue="JUnit.RectangularMapTest.objectAtTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Vector2dTest" />
+        <item itemvalue="JUnit.AnimalTest" />
         <item itemvalue="JUnit.GrassFieldTest" />
         <item itemvalue="JUnit.RectangularMapTest" />
         <item itemvalue="JUnit.RectangularMapTest.objectAtTest" />
-        <item itemvalue="JUnit.RectangularMapTest.isOccupiedTest" />
-        <item itemvalue="JUnit.GrassFieldTest.GrassFieldTest" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +202,9 @@
       <workItem from="1668761919982" duration="600000" />
       <workItem from="1668793533147" duration="5119000" />
       <workItem from="1668840083188" duration="8460000" />
-      <workItem from="1669033641203" duration="3195000" />
+      <workItem from="1669033641203" duration="3714000" />
+      <workItem from="1669995858298" duration="3966000" />
+      <workItem from="1670261014457" duration="529000" />
     </task>
     <task id="LOCAL-00001" summary="lab2">
       <created>1666637295388</created>
@@ -254,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668442938960</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="lab5">
+      <created>1669056142976</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669056142977</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +274,11 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
               <option name="SHOW_ROOT_NAMES" value="true" />
               <option name="FILTERS">
                 <map>
@@ -309,6 +322,7 @@
     <MESSAGE value="lab1" />
     <MESSAGE value="lab3" />
     <MESSAGE value="lab4" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab4" />
+    <MESSAGE value="lab5" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab5" />
   </component>
 </project>
