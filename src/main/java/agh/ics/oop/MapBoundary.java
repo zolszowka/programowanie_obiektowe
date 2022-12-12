@@ -2,6 +2,7 @@ package agh.ics.oop;
 
 import java.util.*;
 
+
 public class MapBoundary implements IPositionChangeObserver{
     SortedSet<Vector2d> xCoord = new TreeSet((Comparator<Vector2d>) (u, v) -> {
         if(u.x == v.x)

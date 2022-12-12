@@ -6,6 +6,7 @@ import java.util.Set;
  *
  * @author apohllo
  *
+ *
  */
 public interface IWorldMap {
     /**

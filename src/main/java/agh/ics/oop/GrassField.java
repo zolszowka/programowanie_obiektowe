@@ -1,9 +1,8 @@
 package agh.ics.oop;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
+
 
 public class GrassField extends AbstractWorldMap implements IWorldMap, IPositionChangeObserver {
     private final int NumberOfGrassFields;

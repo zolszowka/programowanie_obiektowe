@@ -1,6 +1,5 @@
 package agh.ics.oop;
 
-import java.util.ArrayList;
 
 public class RectangularMap extends AbstractWorldMap {
 

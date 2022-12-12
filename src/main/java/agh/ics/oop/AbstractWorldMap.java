@@ -1,5 +1,6 @@
 package agh.ics.oop;
 
+
 import java.util.*;
 
 public abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObserver {
