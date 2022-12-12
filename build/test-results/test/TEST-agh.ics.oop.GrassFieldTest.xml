@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="agh.ics.oop.GrassFieldTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-12-12T11:10:35" hostname="L-10Z" time="0.056">
+  <properties/>
+  <testcase name="objectAtTest()" classname="agh.ics.oop.GrassFieldTest" time="0.039"/>
+  <testcase name="boundsTest()" classname="agh.ics.oop.GrassFieldTest" time="0.002"/>
+  <testcase name="isOccupiedTest()" classname="agh.ics.oop.GrassFieldTest" time="0.003"/>
+  <testcase name="GrassFieldTest()" classname="agh.ics.oop.GrassFieldTest" time="0.003"/>
+  <testcase name="canMoveToTest()" classname="agh.ics.oop.GrassFieldTest" time="0.001"/>
+  <testcase name="placeTest()" classname="agh.ics.oop.GrassFieldTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
