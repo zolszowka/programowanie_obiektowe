@@ -3,8 +3,9 @@ package agh.ics.oop;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
-public class GrassField extends AbstractWorldMap implements IWorldMap {
+public class GrassField extends AbstractWorldMap implements IWorldMap, IPositionChangeObserver {
     private final int NumberOfGrassFields;
     private final Map<Vector2d, Grass> grasses;
 
@@ -20,6 +21,12 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
             }
             Grass pieceOfGrass = new Grass(position);
             this.grasses.put(position, pieceOfGrass);
+            boundaryMap.positionChanged(new Vector2d(999, 999), position);
+            Vector2d[] newBounds = updateBounds();
+            this.lowerLeft = newBounds[0];
+            this.upperRight = newBounds[1];
+
+
         }
     }
 
@@ -30,7 +37,22 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
 
     @Override
     public boolean canMoveTo(Vector2d position) {
-        return !(objectAt(position) instanceof Animal);
+        if(isOccupied(position)){
+            Object o = objectAt(position);
+            if (o instanceof Animal){
+                return false;
+            }
+            if (o instanceof  Grass){  //zwierzątko zjada trawę
+                int low = 0;
+                int high = (int) Math.floor(Math.sqrt(10 * NumberOfGrassFields));
+                Vector2d new_position = generatePosition(low, high);
+                while (isOccupied(new_position)) {
+                    new_position = generatePosition(low, high);
+                }
+                grasses.remove(o);
+            }
+        }
+        return true;
     }
 
     @Override
@@ -43,8 +65,9 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
         }
     }
 
+
     @Override
-    public Vector2d[] updateBounds() {
+    protected Vector2d[] updateBounds() {
         Vector2d upper = new Vector2d(Integer.MIN_VALUE, Integer.MIN_VALUE);
         Vector2d lower = new Vector2d(Integer.MAX_VALUE, Integer.MAX_VALUE);
         for (IMapElement animal : animals.values()) {
@@ -58,5 +81,6 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
         }
         return new Vector2d[]{lower, upper};
     }
+
 
 }

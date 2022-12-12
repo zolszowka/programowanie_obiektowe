@@ -35,11 +35,12 @@ public class Animal implements IMapElement {
         this.observers.remove(observer);
     }
 
-    private void positionChanged(Vector2d oldPosition, Vector2d newPosition){
-        for(IPositionChangeObserver observer: observers){
-            observer.positionChanged(oldPosition, newPosition);
+    protected void notify(Vector2d oldPos, Vector2d newPos ){
+        for (IPositionChangeObserver obs: observers) {
+            obs.positionChanged(oldPos, newPos);
         }
     }
+
 
     public boolean isAt(Vector2d position) {
         return this.position.equals(position);
@@ -61,12 +62,14 @@ public class Animal implements IMapElement {
             case FORWARD -> {
                 Vector2d new_position = this.position.add(this.orientation.toUnitVector());
                 if (this.map.canMoveTo(new_position)) {
+                    notify(this.position, new_position);
                     this.position = new_position;
                 }
             }
             case BACKWARD -> {
                 Vector2d new_position = this.position.subtract(this.orientation.toUnitVector());
                 if (this.map.canMoveTo(new_position)) {
+                    notify(this.position, new_position);
                     this.position = new_position;
                 }
             }

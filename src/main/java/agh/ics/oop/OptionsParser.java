@@ -15,18 +15,15 @@ public class OptionsParser {
 
         int j=0;
         for(int i = 0; i<args.length; i++){
-            MoveDirection res = switch(args[i]){
-                case "f", "forward" -> MoveDirection.FORWARD;
-                case "b", "backward" -> MoveDirection.BACKWARD;
-                case "l", "left" -> MoveDirection.LEFT;
-                case "r", "right" -> MoveDirection.RIGHT;
-                default -> null;
-            };
-
-            if(res != null){
-                directions[j] = res;
-                j++;
+            switch(args[i]){
+                case "f", "forward" -> directions[j] = MoveDirection.FORWARD;
+                case "b", "backward" -> directions[j] = MoveDirection.BACKWARD;
+                case "l", "left" -> directions[j] = MoveDirection.LEFT;
+                case "r", "right" -> directions[j] = MoveDirection.RIGHT;
+                default -> throw new IllegalArgumentException(args[i] + " is not a legal move exceptions");
             }
+
+            j++;
         }
 
         return directions;

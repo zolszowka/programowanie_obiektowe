@@ -1,13 +1,14 @@
 package agh.ics.oop;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObserver {
     protected Map<Vector2d, Animal> animals;
     protected final MapVisualizer mapVisualizer = new MapVisualizer(this);
+    protected Set<IMapElement> newMapElements = new HashSet<>();
     protected Vector2d lowerLeft;
     protected Vector2d upperRight;
+    protected final MapBoundary boundaryMap = new MapBoundary();
 
     protected abstract Vector2d[] updateBounds();
 
@@ -18,8 +19,8 @@ public abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObser
     @Override
     public void positionChanged(Vector2d oldPosition, Vector2d newPosition){
         Animal animal = animals.get(oldPosition);
-        animals.put(newPosition, animal);
         animals.remove(oldPosition, animal);
+        animals.put(newPosition, animal);
     }
 
     @Override
@@ -30,7 +31,7 @@ public abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObser
             animal.addObserver(this);
             return true;
         } else {
-            return false;
+            throw new IllegalArgumentException("Can not place at specified position");
         }
     }
 
@@ -49,4 +50,13 @@ public abstract class AbstractWorldMap implements IWorldMap,IPositionChangeObser
         this.updateBounds();
         return this.mapVisualizer.draw(this.lowerLeft, this.upperRight);
     }
+    public Vector2d getLowerLeft() {
+        return lowerLeft;
+    }
+
+    public Vector2d getUpperRight() {
+        return upperRight;
+    }
+
+
 }
