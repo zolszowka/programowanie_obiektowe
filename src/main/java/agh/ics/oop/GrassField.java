@@ -24,8 +24,6 @@ public class GrassField extends AbstractWorldMap implements IWorldMap, IPosition
             Vector2d[] newBounds = updateBounds();
             this.lowerLeft = newBounds[0];
             this.upperRight = newBounds[1];
-
-
         }
     }
 
@@ -48,7 +46,14 @@ public class GrassField extends AbstractWorldMap implements IWorldMap, IPosition
                 while (isOccupied(new_position)) {
                     new_position = generatePosition(low, high);
                 }
-                grasses.remove(o);
+
+                grasses.remove(((Grass) o).getPosition());
+                Grass pieceOfGrass = new Grass(new_position);
+                grasses.put(new_position, pieceOfGrass);
+                boundaryMap.positionChanged(((Grass) o).getPosition(), position);
+                Vector2d[] newBounds = updateBounds();
+                this.lowerLeft = newBounds[0];
+                this.upperRight = newBounds[1];
             }
         }
         return true;
@@ -62,6 +67,11 @@ public class GrassField extends AbstractWorldMap implements IWorldMap, IPosition
         else{
             return grasses.get(position);
         }
+    }
+
+    @Override
+    public String getPath() {
+        return "src/main/resources/grass.png";
     }
 
 
@@ -81,5 +91,15 @@ public class GrassField extends AbstractWorldMap implements IWorldMap, IPosition
         return new Vector2d[]{lower, upper};
     }
 
+    public Vector2d findUpperRight() {
+        if (boundaryMap.xCoord.isEmpty())
+            return new Vector2d(0, 0);
+        return new Vector2d(boundaryMap.xCoord.last().x, boundaryMap.yCoord.last().y);
+    }
 
+    public Vector2d findLowerLeft(){
+        if(boundaryMap.xCoord.isEmpty())
+            return new Vector2d(0, 0);
+        return new Vector2d (boundaryMap.xCoord.first().x, boundaryMap.yCoord.first().y);
+    }
 }

@@ -1,5 +1,7 @@
 package agh.ics.oop;
 
+import agh.ics.oop.gui.App;
+
 import java.util.*;
 
 public class Animal implements IMapElement {
@@ -26,16 +28,26 @@ public class Animal implements IMapElement {
         };
     }
 
-    void addObserver(IPositionChangeObserver observer){
+    @Override
+    public String getPath() {
+        return switch (this.getOrientation()) {
+            case NORTH -> "src/main/resources/up.png";
+            case SOUTH -> "src/main/resources/down.png";
+            case EAST -> "src/main/resources/right.png";
+            case WEST -> "src/main/resources/left.png";
+        };
+    }
+
+    public void addObserver(IPositionChangeObserver observer) {
         this.observers.add(observer);
     }
 
-    void removeObserver(IPositionChangeObserver observer){
+    void removeObserver(IPositionChangeObserver observer) {
         this.observers.remove(observer);
     }
 
-    protected void notify(Vector2d oldPos, Vector2d newPos ){
-        for (IPositionChangeObserver obs: observers) {
+    protected void notify(Vector2d oldPos, Vector2d newPos) {
+        for (IPositionChangeObserver obs : observers) {
             obs.positionChanged(oldPos, newPos);
         }
     }

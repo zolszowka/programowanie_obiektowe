@@ -19,4 +19,12 @@ public class RectangularMap extends AbstractWorldMap {
         return new Vector2d[]{this.lowerLeft, this.upperRight};
     }
 
+    @Override
+    public Vector2d findLowerLeft() {
+        return lowerLeft;
+    }
+    @Override
+    public Vector2d findUpperRight() {
+        return upperRight;
+    }
 }

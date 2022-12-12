@@ -48,4 +48,5 @@ public interface IWorldMap {
     Object objectAt(Vector2d position);
 
 
+    String getPath();
 }

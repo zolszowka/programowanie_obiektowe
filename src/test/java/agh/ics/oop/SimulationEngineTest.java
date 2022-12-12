@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class SimulationEngineTest {
-
+    /*
     @Test
     public void runTest(){
         String[] moves = new String[] {"f",  "b", "r", "l", "f", "f", "r", "r", "f", "f", "f", "f", "f", "f", "f", "f"};
@@ -24,7 +24,7 @@ public class SimulationEngineTest {
         Animal animal2 = (Animal) map.objectAt(new Vector2d(3,4));
         assertEquals(animal1.toString(), "S");
         assertEquals(animal2.toString(), "N");
-    }
+    }*/
 
 
 }
